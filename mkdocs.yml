@@ -1,0 +1,118 @@
+site_name: Supply Intelligence
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.mark
+
+theme:
+  logo: Imagens/logo.png
+  name: 'material'
+  language: pt-BR
+
+  palette:
+    - media: "(prefers-color-scheme)"
+      scheme: default
+      toggle:
+        icon: material/brightness-auto
+        name: Light Mode
+
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: custom
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Dark Mode
+        
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: custom
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: System Preference
+
+nav:
+
+  - Início: index.md
+
+
+  - Relatórios:
+  
+    - Estoque de Segurança:
+      - Introdução: Relatórios/Estoque de Seguraça/Introdução.md
+      - Relatório: Relatórios/Estoque de Seguraça/Relatório.md
+      - Hiperparâmetros: Relatórios/Estoque de Seguraça/Hiperparâmetros.md
+      - Cálculo: Relatórios/Estoque de Seguraça/Cálculo.md
+
+
+  - Ferramentas:
+
+    - Auto Rateio: Ferramentas/Auto Rateio.md
+    - Curva ABC: Ferramentas/Curva ABC.md
+
+
+  - Dashboards:
+
+    - Compras:
+      - Gerencial de Compras: Dashboards/Compras/Gerencial de Compras.md
+      - OTB: Dashboards/Compras/OTB.md
+      - PO RecebimentoAgendado: Dashboards/Compras/PO RecebimentoAgendado.md
+      - PO's Report: Dashboards/Compras/PO's Report.md
+      - Priority: Dashboards/Compras/Priority.md
+
+
+    - Transferências:
+      - Histórico de Separação: Dashboards/Transferências/Histórico de Separação.md
+      - Status Separação TOs Dia Atual: Dashboards/Transferências/Status Separação TOs Dia Atual.md
+      - TO's Report: Dashboards/Transferências/TO's Report.md
+
+
+    - Ruptura:
+      - Arvore De Ruptura: Dashboards/Ruptura/Arvore De Ruptura.md
+      - OOS Atual: Dashboards/Ruptura/OOS Atual.md
+      - OOS Histórico: Dashboards/Ruptura/OOS Histórico.md
+      - Ruptura - Impacto FDS: Dashboards/Ruptura/Ruptura - Impacto FDS.md
+      - Ruptura New: Dashboards/Ruptura/Ruptura New.md
+
+
+    - Vendas:
+      - Lost Sales: Dashboards/Vendas/Lost Sales.md
+      - Promo UF: Dashboards/Vendas/Promo UF.md
+      - Sales: Dashboards/Vendas/Sales.md
+
+
+    - Estoque:
+      - Aging: Dashboards/Estoque/Aging.md
+      - Estoque Atual: Dashboards/Estoque/Estoque Atual.md
+      - Estoque Overview: Dashboards/Estoque/Estoque Overview.md
+      - Faixa de Estoque: Dashboards/Estoque/Faixa de Estoque.md
+      - Temperature Report: Dashboards/Estoque/Temperature Report.md
+
+
+    - Recebimento:
+      - Backlog Lojas: Dashboards/Recebimento/Backlog Lojas.md
+      - Cash Flow: Dashboards/Recebimento/Cash Flow.md
+      - Fill Rate: Dashboards/Recebimento/Fill Rate.md
+      - Scorecard: Dashboards/Recebimento/Scorecard.md
+      - Scorecard V2: Dashboards/Recebimento/Scorecard V2.md
+
+
+    - Slack:
+      - Chamados Intelligence: Dashboards/Slack/Chamados Intelligence.md
+      - Chamados Service Store: Dashboards/Slack/Chamados Service Store.md
+      - Chamados Store Closed: Dashboards/Slack/Chamados Store Closed.md
+
+
+    - Outros:
+      - ATP CAT3: Dashboards/Outros/ATP CAT3.md
+      - SCH S&OE_v2: Dashboards/Outros/SCH S&OE_v2.md
+      - Gasto Snowflake: Dashboards/Outros/Gasto Snowflake.md
+
+
+  - Extras:
+    - Snowflake ODBC - Excel: Extras/Snowflake ODBC - Excel
+    - TESTE: Extras/TESTE.md
