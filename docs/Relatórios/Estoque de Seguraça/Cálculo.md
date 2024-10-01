@@ -2,7 +2,7 @@
 
 ## **Propósito**
 <p style="text-align: justify;">
-O cálculo do estoque de segurança busca mitigar a falta de estoque mesmo diante das variabilidades na demanda e no fornecimento. SKUs com maior variabilidade nas entregas dos fornecedores e nas vendas necessitam de um estoque de segurança maior em comparação com SKUs que apresentam menos variabilidade. Isso assegura que a empresa consiga atender às necessidades dos clientes sem interrupções, mantendo a eficiência operacional e minimizando os riscos de rupturas de estoque.</p>
+O cálculo do estoque de segurança busca mitigar a falta de estoque mesmo diante das variabilidades na demanda e no fornecimento de SKUs com maior variabilidade nas entregas dos fornecedores e nas vendas necessitam de um estoque de segurança maior em comparação com SKUs que apresentam menor variabilidade. Isso assegura que a empresa consiga atender às necessidades dos clientes sem interrupções, mantendo a eficiência operacional e minimizando os riscos de rupturas de estoque.</p>
 
 ## **Venda**
 
@@ -122,7 +122,7 @@ Depois, dos dados que foram filtrados no <code>CV2</code> é calculado um novo C
 
 ## **Fator-Z**
 <p style="text-align: justify;">
-Agora com todas as limpezas de venda utilizamos o hiperparâmetro Fator-Z que representa o nível de confiança necessário para garantir que o estoque seja suficiente para atender à demanda durante um período de tempo específico, mesmo diante de incertezas e variabilidades.
+Agora com todas as limpezas de venda utilizamos o hiperparâmetro <code>Fator-Z</code> que representa o nível de confiança necessário para garantir que o estoque seja suficiente para atender à demanda durante um período de tempo específico, mesmo diante de incertezas e variabilidades.
 
 ```
 Cálculo: {fator_z} * sqrt(({avg_leadtime} * square({stddev_sales})) + (square({avg_sales}) * square({stddev_leadtime})))

@@ -21,7 +21,7 @@ Depois de garantir que esses requisitos estão cumpridos, <a href="https://drive
 
 ## **Como Atualizar Relatório**
 <p style="text-align: justify;">
-O relatório possui conexão com ODBC do snowflake, basta atualizar a tabela conectada ao excel conforme a documentação <a href="../../../Extras/Snowflake ODBC - Excel" target="_blank">Snowflake ODBC - Excel</a>.
+O relatório possui conexão com ODBC do snowflake, basta atualizar a tabela conectada ao excel conforme a documentação <a href="../../../Extras/SnowFlake ODBC - Excel" target="_blank">Snowflake ODBC - Excel</a>.
 </p>
 
 ## **Sobre o Relatório**

@@ -13,7 +13,7 @@ Os hiperparâmetros são valores personalizáveis pelo analista que determinam o
 Para garantir a segurança e integridade dos dados, estabelecemos os seguintes requisitos de acesso à planilha de hiperparâmetros:</p>
 
 ### **Acesso como Viewer**
-<div style="margin: 30px;"><p style="text-align: justify;">Para visualizar a planilha de hiperparâmetros, é necessário fazer login com uma conta corporativa <code><b>@soudaki.com</code></b>. Isso assegura que apenas membros autorizados da organização possam acessar as informações.</p></div>
+<div style="margin: 30px;"><p style="text-align: justify;">Para visualizar a planilha de <a href="https://docs.google.com/spreadsheets/d/1NV6lk_l6IaO1lJ8Bk8Kgx3XNw8vDvFX3hQnN7IGi-HQ/edit?gid=0#gid=0" target="_blank">hiperparâmetros</a>, é necessário fazer login com uma conta corporativa <code><b>@soudaki.com</code></b>. Isso assegura que apenas membros autorizados da organização possam acessar as informações.</p></div>
 
 ### **Acesso como Editor**
 <div style="margin: 30px;"><p style="text-align: justify;">
