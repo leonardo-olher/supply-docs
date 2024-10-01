@@ -73,8 +73,8 @@ Caso tenhamos 30 valores por dia da semana, uf, sku ou mais, é realizado um Tes
 <p style="text-align: justify;">
 Para os valores que não foram classificados como distribuição normal, realizamos a seguinte análise:
 <ul>
-<li>Se a mediana dos dados for maior que a média, classificamos a distribuição como <code>unicaudal à esquerda</code>.
 <li>Se a mediana dos dados for menor que a média, classificamos a distribuição como <code>unicaudal à direita</code>.
+<li>Se a mediana dos dados for maior que a média, classificamos a distribuição como <code>unicaudal à esquerda</code>.
 </ul>
 </p>
 <div style="text-align: center;"><img src="../../Imagens/Estoque de Segurança/Cálculo/3.png" alt="image" width="900"/></div>

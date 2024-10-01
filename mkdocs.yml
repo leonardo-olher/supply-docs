@@ -112,7 +112,5 @@ nav:
       - SCH S&OE_v2: Dashboards/Outros/SCH S&OE_v2.md
       - Gasto Snowflake: Dashboards/Outros/Gasto Snowflake.md
 
-
   - Extras:
-    - Snowflake ODBC - Excel: Extras/Snowflake ODBC - Excel
-    - TESTE: Extras/TESTE.md
+    - SnowFlake ODBC - Excel: Extras/SnowFlake ODBC - Excel.md
