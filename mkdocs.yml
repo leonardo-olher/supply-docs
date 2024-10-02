@@ -5,6 +5,12 @@ markdown_extensions:
   - pymdownx.emoji
   - pymdownx.tasklist
   - pymdownx.mark
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.extra
+  - pymdownx.snippets
+  - tables
 
 theme:
   logo: Imagens/logo.png
@@ -114,3 +120,4 @@ nav:
 
   - Extras:
     - SnowFlake ODBC - Excel: Extras/SnowFlake ODBC - Excel.md
+    - TESTE: Extras/TESTE.md

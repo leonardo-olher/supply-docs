@@ -34,17 +34,17 @@ Essas medidas são essenciais para manter a precisão e a confiabilidade dos dad
 
 |           **Coluna**           |    **Padrão**    |                        **Descrição**                       |
 |:------------------------------:|:----------------:|:----------------------------------------------------------:|
-|          _SALES DAYS_          |        180       | Dias De Vendas: D-Valor até D-1.                           |
-|           _POS DAYS_           |        180       | Dias De POS.                                               |
-|       _INDISPONIBILIDADE_      |    0.50 (50%)    | Máximo de indisponibilidade no dia utilizar venda do dia.  |
-|     _DIAS DA SEMANA IGUAIS_    |         4        | Quantidade de dias da semana (seg, ter, qua, ...) iguais.  |
-|              _CV1_             |    0.30 (30%)    | Coeficiente de Variação da 1ª Média e 1° Desvio Padrão.    |
-|              _CV2_             |    0.30 (30%)    | Coeficiente de Variação da 2ª Média e 2° Desvio Padrão.    |
-|              _CV3_             |    0.30 (30%)    | Coeficiente de Variação da 3ª Média e 3° Desvio Padrão.    |
-| _MÍNIMO DE CASE SIZE POR LOJA_ |    0.10 (30%)    | Porcentagem mínima por caixa de E.S permitido por loja.    |
-|     _MÁXIMO DE SHELFLIFES_     |         1        | Limitador de DDE - Baseado no Valor x Venc. Produto.       |
-|      _MÁXIMO DE LEADTIMES_     |         2        | Limitador de DDE - Baseado no Valor x Leadtime.            |
-|            _FATOR Z_           |         3        | Quantos desvios padrões da média é permitido.              |
+|          `SALES DAYS`          |        180       | Dias De Vendas: D-Valor até D-1.                           |
+|           `POS DAYS`           |        180       | Dias De POS.                                               |
+|       `INDISPONIBILIDADE`      |    0.50 (50%)    | Máximo de indisponibilidade no dia utilizar venda do dia.  |
+|     `DIAS DA SEMANA IGUAIS`    |         4        | Quantidade de dias da semana (seg, ter, qua, ...) iguais.  |
+|              `CV1`             |    0.30 (30%)    | Coeficiente de Variação da 1ª Média e 1° Desvio Padrão.    |
+|              `CV2`             |    0.30 (30%)    | Coeficiente de Variação da 2ª Média e 2° Desvio Padrão.    |
+|              `CV3`             |    0.30 (30%)    | Coeficiente de Variação da 3ª Média e 3° Desvio Padrão.    |
+| `MÍNIMO DE CASE SIZE POR LOJA` |    0.10 (30%)    | Porcentagem mínima por caixa de E.S permitido por loja.    |
+|     `MÁXIMO DE SHELFLIFES`     |         1        | Limitador de DDE - Baseado no Valor x Venc. Produto.       |
+|      `MÁXIMO DE LEADTIMES`     |         2        | Limitador de DDE - Baseado no Valor x Leadtime.            |
+|            `FATOR Z`           |         3        | Quantos desvios padrões da média é permitido.              |
 
 
 ### **Filtros**
@@ -52,28 +52,28 @@ Essas medidas são essenciais para manter a precisão e a confiabilidade dos dad
 
 |   **Coluna**   | **Descrição**        |
 |:--------------:|----------------------|
-|      _UF_      | Estado               |
-|   _HUB CODE_   | Codigo Loja          |
-|   _CAT GROUP_  | Categoria Grupo      |
-|     _CAT1_     | Categoria 1          |
-|     _CAT2_     | Categoria 2          |
-|     _CAT3_     | Categoria 3          |
-|   _SUPPLIER_   | Fornecedor           |
-|     _BUYER_    | Comprador            |
-|    _PLANNER_   | Planejador           |
-|  _ASSORTMENT_  | Sortimento           |
-|    _STATUS_    | Status Produto       |
-|   _REPLENISH_  | Reabastecivel        |
-|     _CURVA_    | Curva ABC            |
-|   _CASE SIZE_  | Quantidade Por Caixa |
-| _RETAIL PRICE_ | Preço GMV            |
+|      `UF`      | Estado               |
+|   `HUB CODE`   | Código Loja          |
+|   `CAT GROUP`  | Categoria Grupo      |
+|     `CAT1`     | Categoria 1          |
+|     `CAT2`     | Categoria 2          |
+|     `CAT3`     | Categoria 3          |
+|   `SUPPLIER`   | Fornecedor           |
+|     `BUYER`    | Comprador            |
+|    `PLANNER`   | Planejador           |
+|  `ASSORTMENT`  | Sortimento           |
+|    `STATUS`    | Status Produto       |
+|   `REPLENISH`  | Reabastecível        |
+|     `CURVA`    | Curva ABC            |
+|   `CASE SIZE`  | Quantidade Por Caixa |
+| `RETAIL PRICE` | Preço GMV            |
 
 <p style="text-align: justify;">As colunas abaixo permitem filtrar um grupo de SKUs com base em valores específicos. Você pode definir filtros para selecionar SKUs cujos valores sejam maiores, menores ou iguais aos valores preenchidos nas colunas case_size e retail_price. Esses filtros ajudam a segmentar os produtos de maneira eficiente, aplicando os hiperparâmetros apenas aos grupos desejados de SKUs.</p>
 
 |   **Coluna**  |                                    **Descrição**                                    |
 |:-------------:|:-----------------------------------------------------------------------------------:|
-| COMPARADOR CS | Filtrar SKUs com Case Size Maior, Menor ou Igual ao valor da coluna Case Size       |
-| COMPARADOR RP | Filtrar SKUs com Retail Price Maior, Menor ou Igual ao valor da coluna Retail Price |
+| `COMPARADOR CS` | Filtrar SKUs com Case Size Maior, Menor ou Igual ao valor da coluna Case Size       |
+| `COMPARADOR RP` | Filtrar SKUs com Retail Price Maior, Menor ou Igual ao valor da coluna Retail Price |
 
 ### **Peso Prioridade**
 <p style="text-align: justify;">
