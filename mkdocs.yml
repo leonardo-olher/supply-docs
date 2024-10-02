@@ -5,6 +5,10 @@ markdown_extensions:
   - pymdownx.emoji
   - pymdownx.tasklist
   - pymdownx.mark
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.extra
 
 theme:
   logo: Imagens/logo.png

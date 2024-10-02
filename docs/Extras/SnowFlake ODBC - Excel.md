@@ -7,8 +7,9 @@
 <li><a href="https://developers.snowflake.com/odbc/" target="_blank">Drive ODBC 64-Bit</a>
 <li><a href="https://drive.google.com/file/d/1j2bM4XlfqqSiNAa5dX9VFgwKSJoWYvht/view?usp=drive_link" target="_blank">Conta de Serviço Supply</a>
 </ul>
-OBS: Para ter acesso ao link acima da conta de serviço, faça login em uma conta corporativa <code>@soudaki.com</code>.
 </p>
+!!! warning
+    Para ter acesso ao link acima da conta de serviço, faça login em uma conta corporativa <code>@soudaki.com</code>.
 
 ## **Passo a Passo**
 ### **Instalação**
@@ -19,8 +20,9 @@ OBS: Para ter acesso ao link acima da conta de serviço, faça login em uma cont
 ### **Drive**
 <p style="text-align: justify;">
 Pesquise no seu computador o drive instalado ODBC 64-Bit.<br>
-OBS: Tem que ser a versão 64-Bit.
 </p>
+!!! warning
+    Tem que ser a versão 64-Bit.
 <div style="text-align: center;"><img src="../Imagens/Snowflake%20ODBC%20-%20Excel/2.png" alt="image" width="500"/></div>
 
 

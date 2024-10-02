@@ -4,3 +4,6 @@
 
 #%%
 !mkdocs gh-deploy
+#%%
+!pip install pymdown-extensions
+

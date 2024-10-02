@@ -2130,10 +2130,9 @@ Por exemplo, a SKU acima possui possui menos registros válidos de venda na segu
 <h2 id="outliers"><strong>Outliers</strong></h2>
 <p style="text-align: justify;">
 A limpeza de outliers é feita identificando valores que estejam acima do limite superior e abaixo do limite inferior, específicos para cada dia da semana (segunda, terça, quarta etc). Dessa maneira, garantimos que os dados utilizados para o cálculo do estoque de segurança sejam mais consistentes, evitando distorções causadas pelo dia da semana.</p>
-
-<pre><code>Limite inferior: Q1 – 1,5 (Q3 - Q1)
+<div class="highlight"><pre><span></span><code>Limite inferior: Q1 – 1,5 (Q3 - Q1)
 Limite superior: Q3 + 1,5 (Q3 - Q1)
-</code></pre>
+</code></pre></div>
 <div style="text-align: center;"><img src="../../Imagens/Estoque de Segurança/Cálculo/1.png" alt="image" width="500"/></div>
 
 <p style="text-align: justify;">
@@ -2208,10 +2207,8 @@ Depois, dos dados que foram filtrados no <code>CV2</code> é calculado um novo C
 <p style="text-align: justify;">
 Agora com todas as limpezas de venda utilizamos o hiperparâmetro <code>Fator-Z</code> que representa o nível de confiança necessário para garantir que o estoque seja suficiente para atender à demanda durante um período de tempo específico, mesmo diante de incertezas e variabilidades.
 
-
-<pre><code>Cálculo: {fator_z} * sqrt(({avg_leadtime} * square({stddev_sales})) + (square({avg_sales}) * square({stddev_leadtime})))
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>Cálculo: {fator_z} * sqrt(({avg_leadtime} * square({stddev_sales})) + (square({avg_sales}) * square({stddev_leadtime})))
+</code></pre></div>
 </p>
 
 <h2 id="estoque-de-seguranca-minimo"><strong>Estoque de Segurança Mínimo</strong></h2>
@@ -2220,10 +2217,8 @@ O estoque de segurança mínimo garante que, mesmo que tenhamos um estoque de se
 <br><br>
 Esse valor é determinado pelo hiperparâmetro <code>MÍNIMO DE CASE SIZE POR LOJA</code>.<br><br>
 
-
-<pre><code>Cálculo: {case_size} * {hubs_ativos} * {MÍNIMO DE CASE SIZE POR LOJA}
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>Cálculo: {case_size} * {hubs_ativos} * {MÍNIMO DE CASE SIZE POR LOJA}
+</code></pre></div>
 Independentemente das variações na demanda ou nas entregas, o nível de estoque de segurança permanece acima de um limite mínimo necessário para sustentar as operações.
 </p>
 
@@ -2234,17 +2229,15 @@ Essa abordagem assegura que o estoque de segurança máximo seja calculado de fo
 Para o estoque de segurança máximo, será considerado o menor valor entre dois cálculos:<br><br>
 
 Hiperparâmetro <code>MÁXIMO DE SHELFLIFES</code>:<br>
-
-<pre><code>Cálculo: {venda média} * {shelflife} * {MÁXIMO DE SHELFLIFES}
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>Cálculo: {venda média} * {shelflife} * {MÁXIMO DE SHELFLIFES}
+</code></pre></div>
 Quando o valor do <code>MÁXIMO DE SHELFLIFES</code> é assumido como 1, isso significa que o valor máximo do estoque de segurança nunca será maior que o shelflife do produto.<br><br><br>
 Hiperparâmetro <code>MÁXIMO DE LEADTIMES</code>:<br>
 </p>
 
-<pre><code>Cálculo: {venda média} * {leadtime fornecedor} * {MÁXIMO DE LEADTIMES}
-</code></pre>
-<p>Quando o valor do <code>MÁXIMO DE LEADTIMES</code> é assumido como 1, isso significa que o valor máximo do estoque de segurança nunca será maior que o leadtime de entrega do fornecedor.<br><br>
+<p><div class="highlight"><pre><span></span><code>Cálculo: {venda média} * {leadtime fornecedor} * {MÁXIMO DE LEADTIMES}
+</code></pre></div>
+Quando o valor do <code>MÁXIMO DE LEADTIMES</code> é assumido como 1, isso significa que o valor máximo do estoque de segurança nunca será maior que o leadtime de entrega do fornecedor.<br><br>
 </p></p>
 
 
