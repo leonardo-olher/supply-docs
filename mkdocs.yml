@@ -9,8 +9,11 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.extra
+<<<<<<< HEAD
   - pymdownx.snippets
   - tables
+=======
+>>>>>>> c99b0efd9156c2ddc4afdb0f2dd82d86e53cbf4c
 
 theme:
   logo: Imagens/logo.png
