@@ -79,11 +79,11 @@ Essas medidas são essenciais para manter a precisão e a confiabilidade dos dad
 <p style="text-align: justify;">
 Na tabela de hiperparâmetros, temos um peso associado a cada filtro criado pelo analista. Se um mesmo SKU estiver presente em mais de um filtro dos hiperparâmetros, o peso de maior número será aplicado ao SKU.<br><br>
 
-Por exemplo, considere um filtro no nível <code>UF = SP</code> que possui um peso menor comparado a um filtro de <code>hub_code = SAO005</code>. Nesse caso, para os SKUs do hub SAO005, mesmo que exista um hiperparâmetro aplicado no nível <code>UF = SP</code>, será aplicado o maior peso, que é o filtro do hub_code. Isso garante que os ajustes mais específicos e críticos sejam priorizados, otimizando o estoque de segurança de acordo com as necessidades mais precisas da operação.<br><br>
+Por exemplo, considere um filtro no nível <code>UF = SP</code> que possui um peso menor comparado a um filtro de <code>cat1 = PETS</code>. Nesse caso, para os SKUs PETS em SP, mesmo que exista um hiperparâmetro aplicado no nível <code>UF = SP</code>, será aplicado o maior peso, que é o filtro da cat1 = PETS. Isso garante que os ajustes mais específicos e críticos sejam priorizados, otimizando o estoque de segurança de acordo com as necessidades mais precisas da operação.<br><br>
 
 Além disso, existe a coluna <b>overwrite</b>, que aplica o maior peso possível e sobrepõe qualquer nível de hiperparâmetro quando selecionado. Isso significa que, independentemente de outros hiperparâmetros definidos, a seleção de overwrite assegura que o peso máximo seja aplicado, garantindo uma prioridade absoluta na aplicação desse hiperparâmetro.<br><br>
 
-Seguindo o exemplo anterior, se estivesse selecionado a opção overwrite para o filtro <code>UF = SP</code>, ele sobre escreveria o filtro <code>hub_code = SAO005</code> Essa abordagem permite uma gestão mais granular e eficiente dos estoques de segurança, garantindo que os recursos sejam alocados de forma mais estratégica e alinhada às demandas operacionais.
+Seguindo o exemplo anterior, se estivesse selecionado a opção overwrite para o filtro <code>UF = SP</code>, ele sobre escreveria o filtro <code>cat1 = PETS</code> Essa abordagem permite uma gestão mais granular e eficiente dos estoques de segurança, garantindo que os recursos sejam alocados de forma mais estratégica e alinhada às demandas operacionais.
 </p>
 
 ## **Como Atualizar**
