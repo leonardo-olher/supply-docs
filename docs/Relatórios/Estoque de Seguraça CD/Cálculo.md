@@ -8,11 +8,11 @@ O cálculo do estoque de segurança busca mitigar a falta de estoque mesmo diant
 
 ### **Periodo**
 <p style="text-align: justify;">
-Primeiro, filtramos os dados de vendas do dia D-1 até D-X, sendo X o hiperparâmetro <code>SALES DAYS</code> inserido na tabela de hiperparâmetros.</p>
+Primeiro, filtramos os dados de vendas do dia D-1 até D-X, sendo X o hiperparâmetro <code><b>SALES DAYS</b></code> inserido na tabela de hiperparâmetros.</p>
 
 ### **Indisponibilidade**
 <p style="text-align: justify;">
-Dessa base de vendas filtrada, será considerado válido para o cálculo se a indisponibilidade do dia no nível hora for menor que o hiperparâmetro <code>INDISPONIBILIDADE</code> definido na tabela de hiperparâmetros.</p>
+Dessa base de vendas filtrada, será considerado válido para o cálculo se a indisponibilidade do dia no nível hora for menor que o hiperparâmetro <code><b>INDISPONIBILIDADE</b></code> definido na tabela de hiperparâmetros.</p>
 |  Dia  |  Hora | IS VALID OOS | IS OOS |
 |:-----:|:-----:|:------------:|:------:|
 | 01/01 | 00:00 |     TRUE     |  FALSE |
@@ -52,7 +52,7 @@ Limite superior: Q3 + 1,5 (Q3 - Q1)
 <div style="text-align: center;"><img src="../../Imagens/Estoque de Segurança/Cálculo/1.png" alt="image" width="500"/></div>
 
 <p style="text-align: justify;">
-No exemplo acima, temos um histograma dos dados de venda de <code>Carne Moida Friboi 500g</code> em <code>São Paulo</code> às <code>Terças-Feiras</code>.<br><br>
+No exemplo acima, temos um histograma dos dados de venda de <code><b>Carne Moida Friboi 500g</b></code> em <code><b>São Paulo</b></code> às <code><b>Terças-Feiras</b></code>.<br><br>
 
 Caso aconteça uma venda fora do intervalo do limite inferior e limite superior será classificado como um outlier e desconsiderado da base de vendas.
 
@@ -60,21 +60,21 @@ Caso aconteça uma venda fora do intervalo do limite inferior e limite superior 
 
 ## **Teste Shapiro-Wilk**
 <p style="text-align: justify;">
-Após a remoção de outliers, caso tenhamos menos de 30 valores por dia da semana, uf, sku, é realizado um Teste de Shapiro-Wilk nos dados restantes. Caso o valor-p (p_value) do teste seja maior que 10%, assumimos que os dados apresentam uma <code>distribuição normal</code>.
+Após a remoção de outliers, caso tenhamos menos de 30 valores por dia da semana, uf, sku, é realizado um Teste de Shapiro-Wilk nos dados restantes. Caso o valor-p (p_value) do teste seja maior que 10%, assumimos que os dados apresentam uma <code><b>distribuição normal</b></code>.
 </p>
 <div style="text-align: center;"><img src="../../Imagens/Estoque de Segurança/Cálculo/2.png" alt="image" width="500"/></div>
 
 ## **Teste Kolmogorov–Smirnov**
 <p style="text-align: justify;">
-Caso tenhamos 30 valores por dia da semana, uf, sku ou mais, é realizado um Teste de Kolmogorov–Smirnov nos dados restantes. Caso o valor-p (p_value) do teste seja maior que 10%, assumimos que os dados apresentam uma <code>distribuição normal</code>.
+Caso tenhamos 30 valores por dia da semana, uf, sku ou mais, é realizado um Teste de Kolmogorov–Smirnov nos dados restantes. Caso o valor-p (p_value) do teste seja maior que 10%, assumimos que os dados apresentam uma <code><b>distribuição normal</b></code>.
 </p>
 
 ## **Unicaudal Esquerda e Direita**
 <p style="text-align: justify;">
 Para os valores que não foram classificados como distribuição normal, realizamos a seguinte análise:
 <ul>
-<li>Se a mediana dos dados for menor que a média, classificamos a distribuição como <code>unicaudal à direita</code>.
-<li>Se a mediana dos dados for maior que a média, classificamos a distribuição como <code>unicaudal à esquerda</code>.
+<li>Se a mediana dos dados for menor que a média, classificamos a distribuição como <code><b>unicaudal à direita</b></code>.
+<li>Se a mediana dos dados for maior que a média, classificamos a distribuição como <code><b>unicaudal à esquerda</b></code>.
 </ul>
 </p>
 <div style="text-align: center;"><img src="../../Imagens/Estoque de Segurança/Cálculo/3.png" alt="image" width="900"/></div>
@@ -83,7 +83,7 @@ Para os valores que não foram classificados como distribuição normal, realiza
 
 ### **CV1**
 <p style="text-align: justify;">
-Depois disso, é calculado o coeficiente de variação dos dados. Caso o coeficiente seja maior que o valor preenchido na tabela de hiperparâmetros <code>CV1</code>, será feito um corte de dados conforme a distribuição assumida:
+Depois disso, é calculado o coeficiente de variação dos dados. Caso o coeficiente seja maior que o valor preenchido na tabela de hiperparâmetros <code><b>CV1</b></code>, será feito um corte de dados conforme a distribuição assumida:
 
 <ul>
 <li><b>Distribuição Normal:</b> Removemos 99.7% dos dados nas duas pontas.
@@ -96,7 +96,7 @@ Depois disso, é calculado o coeficiente de variação dos dados. Caso o coefici
 
 ### **CV2**
 <p style="text-align: justify;">
-Depois, dos dados que foram filtrados no <code>CV1</code> é calculado um novo CV apenas com os dados que sobraram, caso o novo CV seja maior que o hiperparâmetro <code>CV2</code> então será feito um novo corte de dados conforme a distribuição assumida:
+Depois, dos dados que foram filtrados no <code><b>CV1</b></code> é calculado um novo CV apenas com os dados que sobraram, caso o novo CV seja maior que o hiperparâmetro <code><b>CV2</b></code> então será feito um novo corte de dados conforme a distribuição assumida:
 
 <ul>
 <li><b>Distribuição Normal:</b> Removemos 95% dos dados nas duas pontas.
@@ -109,7 +109,7 @@ Depois, dos dados que foram filtrados no <code>CV1</code> é calculado um novo C
 
 ### **CV3**
 <p style="text-align: justify;">
-Depois, dos dados que foram filtrados no <code>CV2</code> é calculado um novo CV apenas com os dados que sobraram, caso o novo CV seja maior que o hiperparâmetro <code>CV3</code> então será feito um novo corte de dados conforme a distribuição assumida:
+Depois, dos dados que foram filtrados no <code><b>CV2</b></code> é calculado um novo CV apenas com os dados que sobraram, caso o novo CV seja maior que o hiperparâmetro <code><b>CV3</b></code> então será feito um novo corte de dados conforme a distribuição assumida:
 
 <ul>
 <li><b>Distribuição Normal:</b> Removemos 90% dos dados nas duas pontas.
@@ -122,7 +122,7 @@ Depois, dos dados que foram filtrados no <code>CV2</code> é calculado um novo C
 
 ## **Fator-Z**
 <p style="text-align: justify;">
-Agora com todas as limpezas de venda utilizamos o hiperparâmetro <code>Fator-Z</code> que representa o nível de confiança necessário para garantir que o estoque seja suficiente para atender à demanda durante um período de tempo específico, mesmo diante de incertezas e variabilidades.
+Agora com todas as limpezas de venda utilizamos o hiperparâmetro <code><b>Fator-Z</b></code> que representa o nível de confiança necessário para garantir que o estoque seja suficiente para atender à demanda durante um período de tempo específico, mesmo diante de incertezas e variabilidades.
 
 ```
 Cálculo: {fator_z} * sqrt(({avg_leadtime} * square({stddev_sales})) + (square({avg_sales}) * square({stddev_leadtime})))
@@ -133,7 +133,7 @@ Cálculo: {fator_z} * sqrt(({avg_leadtime} * square({stddev_sales})) + (square({
 <p style="text-align: justify;">
 O estoque de segurança mínimo garante que, mesmo que tenhamos um estoque de segurança baixo, ele nunca fique abaixo de um determinado valor.
 <br><br>
-Esse valor é determinado pelo hiperparâmetro <code>MÍNIMO DE CASE SIZE POR LOJA</code>.<br><br>
+Esse valor é determinado pelo hiperparâmetro <code><b>MÍNIMO DE CASE SIZE POR LOJA</b></code>.<br><br>
 
 ```
 Cálculo: {case_size} * {hubs_ativos} * {MÍNIMO DE CASE SIZE POR LOJA}
@@ -147,16 +147,16 @@ Essa abordagem assegura que o estoque de segurança máximo seja calculado de fo
 <br><br><br>
 Para o estoque de segurança máximo, será considerado o menor valor entre dois cálculos:<br><br>
 
-Hiperparâmetro <code>MÁXIMO DE SHELFLIFES</code>:<br>
+Hiperparâmetro <code><b>MÁXIMO DE SHELFLIFES</b></code>:<br>
 ```
 Cálculo: {venda média} * {shelflife} * {MÁXIMO DE SHELFLIFES}
 ```
-Quando o valor do <code>MÁXIMO DE SHELFLIFES</code> é assumido como 1, isso significa que o valor máximo do estoque de segurança nunca será maior que o shelflife do produto.<br><br><br>
-Hiperparâmetro <code>MÁXIMO DE LEADTIMES</code>:<br>
+Quando o valor do <code><b>MÁXIMO DE SHELFLIFES</b></code> é assumido como 1, isso significa que o valor máximo do estoque de segurança nunca será maior que o shelflife do produto.<br><br><br>
+Hiperparâmetro <code><b>MÁXIMO DE LEADTIMES</b></code>:<br>
 </p>
 
 ```
 Cálculo: {venda média} * {leadtime fornecedor} * {MÁXIMO DE LEADTIMES}
 ```
-Quando o valor do <code>MÁXIMO DE LEADTIMES</code> é assumido como 1, isso significa que o valor máximo do estoque de segurança nunca será maior que o leadtime de entrega do fornecedor.<br><br>
+Quando o valor do <code><b>MÁXIMO DE LEADTIMES</b></code> é assumido como 1, isso significa que o valor máximo do estoque de segurança nunca será maior que o leadtime de entrega do fornecedor.<br><br>
 </p>
